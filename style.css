@@ -1,0 +1,98 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.output{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20%;
+    padding: 10px;
+    display: none;
+}
+.output img{
+    width: 100%;
+}
+.galary{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    place-items: center;
+    border: solid 2px #eee;
+    gap: 10px;
+    padding: 10px;
+    
+
+}
+img{
+    object-fit:cover;
+    border-radius: 10px;
+}
+.output button{
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(7, 117, 212);
+    color: white;
+    right: 0;
+}
+
+/* For Android Lasdcape */
+@media (width <= 768px){
+.galary{
+    grid-template-columns: repeat(2,190px);
+    gap: 1px;
+}
+.galary img{
+    width: 180px;
+}
+.output{
+    width: 100%;
+}
+}
+
+/* For Android View */
+@media (width <= 480px){
+    .galary{
+        grid-template-columns: repeat(2,190px);
+        gap: 1px;
+    }
+    .galary img{
+        width: 180px;
+    }
+    .output{
+        width: 100%;
+    }
+    }
+    
+.links{
+    padding: 10px;
+    display: flex;
+    gap: 3rem;
+}
+.links i{
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
